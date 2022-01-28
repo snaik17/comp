@@ -1,11 +1,3 @@
----
-name: Comment Template
-about: Describe this issue template's purpose here.
-title: ''
-labels: ''
-assignees: ''
-
----
 
 -  [ ] Removal of access from [Accessshub](https://ibm.idaccesshub.com/ECMv6/request/requestHome) for 
    - [ ] [IAM resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)
@@ -13,8 +5,6 @@ assignees: ''
    - [ ] [GHE orgs](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-GHE.md) - access hub removes team access but not org access
    - [ ] [New Relic](https://synthetics.newrelic.com) - remove access to accounts (CD Public: [1783376](https://synthetics.newrelic.com/accounts/1783376), CD Dedicated: [2228819](https://synthetics.newrelic.com/accounts/2228819), ...)  Access to NR is controlled via AH Application: `ccs-newrelic`
  
-
-
 - [ ]  Removal of Accesses not managed through AccessHUB  
    - [ ]  Vault - Owners defined [here](https://ibm.ent.box.com/notes/344444043206) to raise access removal request following guidleinelines documented [Vault Remove Members Runbook](https://pages.github.ibm.com/vault-as-a-service/vault/onboarding/remove-members.html)
    - [ ] [SOS](https://w3.sos.ibm.com/) - work with security focal to remove from [portal](https://w3.sos.ibm.com/inventory.nsf/compliance_portal.xsp?c_code=ridos); ** NEED VALIDATION **
