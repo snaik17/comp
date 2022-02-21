@@ -61,4 +61,4 @@ Link to [CISO Ticket](https://github.ibm.com/ibmcloud/ciso-compliance-offboardin
 - **If the individual worked on Financial Services Cloud, report termination of that individual to their upline manager on the last day worked.**
    - [ ] Send email to Upline manager and capture screenshot.
 - **Retain access to organizational information and information system-related property (e.g. hardware authentication tokens, keys, identification cards, etc.) and list in this issue the items that have been returned by the individual leaving IBM.** 
-   - [ ] Follow the Country specific HR Checklist which provided for off-boarding
+    - [ ] Follow the Country specific HR Checklist which provided is provided for off-boarding
