@@ -7,13 +7,13 @@ assignees: ''
 
 ---
 
-[Offboarding Runbook](https://github.ibm.com/org-ids/compliance/blob/smith-runbook-updates/runbooks/access-control/Offboarding.md)
+Refer the [Offboarding Runbook](https://github.ibm.com/org-ids/compliance/blob/smith-runbook-updates/runbooks/access-control/Offboarding.md)
 
-Link to CISO Ticket :  < >
+Link to CISO Ticket :  https://github.ibm.com/ibmcloud/ciso-compliance-offboarding/issues/<issuenumber>
 
 -----
 
- ###  Service Team : Access To Be Revoked Checklist (Leaver)
+ ###  Service Team : Access To Be Revoked Checklist 
   
 - **Terminate/revoke any authenticators/credentials associated with that individual on the last day worked**
 
@@ -33,7 +33,7 @@ Link to CISO Ticket :  < >
       - [ ] Slack channels -Remove from private slack channels
       - [ ] Box folders -Remove from  Box folders (Example [WW CD Team](https://ibm.ent.box.com/folder/30409987383?s) , DevOps Insights Dev , SRE-devops-services, Any squad specific folders ) Follow [this](https://support.box.com/hc/en-us/articles/360044196273-Managing-Collaborators#transferfolderowner) for Transfer of Ownership incase needed
       - [ ] [Aha! ](https://secure.aha.io/) -  when the intranet ID is removed from BluePages, the user should be removed from Aha. If you want to be sure, you can contact an admin in #bigblue-aha-liaison Slack channel to remove from the account. 
-      - [ ] Remove from GitHub (public) Repos: [Open toolchain templates](https://github.com/open-toolchain/)  ** NEED VALIDATION **
+      - [ ] Remove from GitHub (public) Repos: [Open toolchain templates](https://github.com/open-toolchain/) 
  
 
 -  **Assess if the leaver had access to any shared accounts or credentials, in which case immediately trigger their rotation/change, and document in this issue the list of impacted accounts/credentials.**
