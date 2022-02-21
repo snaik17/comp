@@ -11,13 +11,13 @@ Refer the [Offboarding Runbook](https://github.ibm.com/org-ids/compliance/blob/s
 
 Link to CISO Ticket :  https://github.ibm.com/ibmcloud/ciso-compliance-offboarding/issues/<issuenumber>
 
-------
+-----
 
- ###  Continous Delivery Team : Access To Be Revoked Checklist 
+ ###  Service Team : Access To Be Revoked Checklist 
   
 - **Terminate/revoke any authenticators/credentials associated with that individual on the last day worked**
 
-   -   [ ] **Removal of access from [Accessshub](https://ibm.idaccesshub.com/ECMv6/request/requestHome)** ([Details](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)) 
+  -   [ ] **Removal of access from [Accessshub](https://ibm.idaccesshub.com/ECMv6/request/requestHome)** ([Details](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)) 
       - Open [AccessHUB Home page](https://ibm.idaccesshub.com/ECMv6/request/requestHome).
       - Click Request or Manage Access for Others (to delete an account for someone who has left your team) (If you are removing access for someone else you will have to search for the user, then click user & select Manage) 
       - Next you will see a list of applications member has access to , select all and remove , after selection click-on Delete.
@@ -38,7 +38,7 @@ Link to CISO Ticket :  https://github.ibm.com/ibmcloud/ciso-compliance-offboardi
       - [ ] [ASoC](https://cloud.appscan.com/AsoCUI/serviceui/main/myapps/oneapp/f8fca2ac-7671-e811-9423-002590ac753d/scans) - ask in `#sos-asoc` to remove user from "IBM DevOps Services" group
       - [ ] Slack channels -Remove from private slack channels
       - [ ] Box folders -Remove from  Box folders (Example [WW CD Team](https://ibm.ent.box.com/folder/30409987383?s) , DevOps Insights Dev , SRE-devops-services, Any squad specific folders ) Follow [this](https://support.box.com/hc/en-us/articles/360044196273-Managing-Collaborators#transferfolderowner) for Transfer of Ownership incase needed
-      - [ ] [Aha! ](https://secure.aha.io/) -  when the intranet ID is removed from BluePages, the user should be removed from Aha. If you want to be sure, you can contact an admin in #bigblue-aha-liaison Slack channel to remove from the account. 
+      - [ ] [Aha! ](https://secure.aha.io/) -  when the intranet ID is removed from BluePages, the user should be removed from Aha. If you want to be sure, you can contact an admin in #bigblue-aha-liaison Slack channel to remove from the account. 
       - [ ] Remove from GitHub (public) Repos: [Open toolchain templates](https://github.com/open-toolchain/) 
  
 
