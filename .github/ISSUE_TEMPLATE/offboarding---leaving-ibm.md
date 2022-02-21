@@ -2,14 +2,14 @@
 name: 'Offboarding : Leaving IBM'
 about: 'Offboarding -Leaving IBM '
 title: Offboarding for <name >
-labels: ''
+labels: offboarding:leaver
 assignees: ''
 
 ---
 
 Refer the [Offboarding Runbook](https://github.ibm.com/org-ids/compliance/blob/smith-runbook-updates/runbooks/access-control/Offboarding.md)
 
-Link to CISO Ticket :  https://github.ibm.com/ibmcloud/ciso-compliance-offboarding/issues/<issuenumber>
+Link to [CISO Ticket](https://github.ibm.com/ibmcloud/ciso-compliance-offboarding/issues) :
 
 -----
 
@@ -19,12 +19,13 @@ Link to CISO Ticket :  https://github.ibm.com/ibmcloud/ciso-compliance-offboardi
 
   -   [ ] **Removal of access from [Accessshub](https://ibm.idaccesshub.com/ECMv6/request/requestHome)** ([Details](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)) 
       - Open [AccessHUB Home page](https://ibm.idaccesshub.com/ECMv6/request/requestHome).
-      - Click Request or Manage Access for Others (to delete an account for someone who has left your team) (If you are removing access for someone else you will have to search for the user, then click user & select Manage) 
-      - Next you will see a list of applications member has access to , select all and remove , after selection click-on Delete.
+      - Click Request or Manage Access for Others (to delete an account for someone who has left your team) 
+      -  Search for the user, then click user & select Manage
+      - Next you will see a list of applications member has access to , select and click-on Delete.
       - Confirm by entering reason for removal - "User leaving IBM and no longer needs access to CD resources", then click-on Remove 
 
       **List of resources:** 
-      -  [IAM resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)
+        - [IAM resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)
         - [SoftLayer resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-SL.md) 
         -  [GHE orgs](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-GHE.md) ( Access hub removes team access but not org access )
         -  [New Relic](https://synthetics.newrelic.com) - remove access to accounts (CD Public: [1783376](https://synthetics.newrelic.com/accounts/1783376), CD Dedicated: [2228819](https://synthetics.newrelic.com/accounts/2228819), ...) AH Application: `ccs-newrelic`
@@ -33,41 +34,31 @@ Link to CISO Ticket :  https://github.ibm.com/ibmcloud/ciso-compliance-offboardi
 
   -  **Removal of Accesses not managed through AccessHUB**
       - [ ]  Vault - Owners defined [here](https://ibm.ent.box.com/notes/344444043206) to raise access removal request following guidleinelines documented [Vault Remove Members Runbook](https://pages.github.ibm.com/vault-as-a-service/vault/onboarding/remove-members.html)
-      - [ ] [PagerDuty](https://ibm.pagerduty.com/) - Remove from CD team: Bluemix DevOps Services OTC; remove from Insights team: CD Insights ** NEED VALIDATION - How to Link  ** 
+      - [ ] [PagerDuty](https://ibm.pagerduty.com/) - Remove from CD team: Bluemix DevOps Services OTC; remove from Insights team: CD Insights [Link](https://w3.ibm.com/w3publisher/pagerduty/getting-started/offboarding)
       - [ ] [ServiceNow](https://watson.service-now.com/) -  Refer [ ServiceNow Runbook ](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/ServiceNow-Access.md#removing-users)
       - [ ] [ASoC](https://cloud.appscan.com/AsoCUI/serviceui/main/myapps/oneapp/f8fca2ac-7671-e811-9423-002590ac753d/scans) - ask in `#sos-asoc` to remove user from "IBM DevOps Services" group
-      - [ ] Slack channels -Remove from private slack channels
-      - [ ] Box folders -Remove from  Box folders (Example [WW CD Team](https://ibm.ent.box.com/folder/30409987383?s) , DevOps Insights Dev , SRE-devops-services, Any squad specific folders ) Follow [this](https://support.box.com/hc/en-us/articles/360044196273-Managing-Collaborators#transferfolderowner) for Transfer of Ownership incase needed
+      - [ ] Slack - Remove from private slack channels
+      - [ ] Box folders - Remove from  Box folders (Example [WW CD Team](https://ibm.ent.box.com/folder/30409987383?s),DevOps Insights Dev, SRE-devops-services, Any squad specific folders ) Follow [this](https://support.box.com/hc/en-us/articles/360044196273-Managing-Collaborators#transferfolderowner) for Transfer of Ownership incase needed
       - [ ] [Aha! ](https://secure.aha.io/) -  when the intranet ID is removed from BluePages, the user should be removed from Aha. If you want to be sure, you can contact an admin in #bigblue-aha-liaison Slack channel to remove from the account. 
       - [ ] Remove from GitHub (public) Repos: [Open toolchain templates](https://github.com/open-toolchain/) 
  
 
 -  **Assess if the leaver had access to any shared accounts or credentials, in which case immediately trigger their rotation/change, and document in this issue the list of impacted accounts/credentials.**
-
    - [ ] Revoke & Rotate  **IAM keys** and **IAM serviceIDs** Check items user had access to by checking the [IAM Inventory Link](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/iam-credentials.csv) 
-
-      - **IAM Service ID** : Update owner/rotator to new owner/rotator in [IAM Config ](https://github.ibm.com/org-ids/key-rotation/tree/master/config) and raise pull request. Daily automation will run and update the [Inventory](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/)
-     
+      - **IAM Service ID** : Update owner/rotator to new owner/rotator in [IAM Config ](https://github.ibm.com/org-ids/key-rotation/tree/master/config) and raise pull request. Daily automation will run and update the [Inventory](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/)    
       - **IAM key** :  - Follow the [Link](https://github.ibm.com/org-ids/key-rotation/tree/master/) and update owner/rotator in the file [here](https://github.ibm.com/org-ids/key-rotation/blob/master/functionalID-user-mapping.yaml)
-
    - [ ] Revoke & Rotate  **non-IAM keys** : Check items user had access to by checking
        the [non-IAM Inventory](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/non-iam-credentials.csv) 
-   
-      - Update owner/rotator in [here](https://github.ibm.com/org-ids/key-rotation/blob/master/config-non-iam/credentials.yaml) and raise pull request. Daily automation will run and update the [non-IAM Inventory ](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/non-iam-credentials.csv) 
-   
-  
+      - Update owner/rotator in [here](https://github.ibm.com/org-ids/key-rotation/blob/master/config-non-iam/credentials.yaml) and raise pull request. Daily automation will run and update the [non-IAM Inventory ](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/non-iam-credentials.csv)    
    - [ ] Rotate secrets to data stores/services the employee had access to in Vault
        - List of people with Access can be seen [here](https://ibm.ent.box.com/file/344444043206?s=t3qnek4rzidylcp3yt4pe01xx5bjhgzb)
-         If person User - revoke access
-         If Person is Owner in Vault - all keys must be rotated. (*** HOW ?**)
-
-   - [ ] Rotate secrets to data stores/services the employee had access to in KeyProtect (*** HOW ?**)
+         If person is User in Vault - revoke access.
+         If Person is Owner in Vault - all keys must be rotated. 
+   - [ ] Rotate secrets to data stores/services the employee had access to in KeyProtect 
 
 - **Make sure the leaver cleans up any personal cloud resources (i.e., personal cloud account and any related cloud resource)**
-
-  - [ ] Follow this [runbook] () 
+  - [ ] IBM Cloud account is deleted following [this] () runbook.
 - **If the individual worked on Financial Services Cloud, report termination of that individual to their upline manager on the last day worked.**
    - [ ] Send email to Upline manager and capture screenshot.
-
 - **Retain access to organizational information and information system-related property (e.g. hardware authentication tokens, keys, identification cards, etc.) and list in this issue the items that have been returned by the individual leaving IBM.** 
-   -[ ] Follow the Country specific Checklist which is provided for off-boarding .
+   - [ ] Follow the Country specific HR Checklist which provided for off-boarding
