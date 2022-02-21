@@ -1,6 +1,6 @@
 ---
 name: 'Offboarding : Leaving IBM'
-about: Offboarding -Leaving IBM  CD Ticket Template
+about: 'Offboarding -Leaving IBM '
 title: Offboarding for <name >
 labels: ''
 assignees: ''
@@ -19,13 +19,13 @@ Link to CISO Ticket :  https://github.ibm.com/ibmcloud/ciso-compliance-offboardi
 
   -  **Removal of access from [Accessshub](https://ibm.idaccesshub.com/ECMv6/request/requestHome)** ([Details](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md))
 
--[ ] Remove all access from AccesHUB for the following
-     -  [IAM resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)
-     - [SoftLayer resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-SL.md) 
-     -  [GHE orgs](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-GHE.md) - access hub removes team access but not org access
-     -  [New Relic](https://synthetics.newrelic.com) - remove access to accounts (CD Public: [1783376](https://synthetics.newrelic.com/accounts/1783376), CD Dedicated: [2228819](https://synthetics.newrelic.com/accounts/2228819), ...) AH Application: `ccs-newrelic`
-     -  [SOS](https://w3.sos.ibm.com/) - [Accesshub Removal link](https://pages.github.ibm.com/SOSTeam/SOS-Docs/idmgt/accesshub/Delete-account/#steps-to-delete-account) and then work with security focal to remove from [portal](https://w3.sos.ibm.com/inventory.nsf/compliance_portal.xsp?c_code=ridos); 
-     -  [Thycotic](https://pimconsole.sos.ibm.com/) - [Link]( https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/Thycotic.md#preconditions) (*** HOW ?**)
+- [  ] Remove all access from AccesHUB for the following
+      -  [IAM resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)
+      - [SoftLayer resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-SL.md) 
+      -  [GHE orgs](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-GHE.md) - access hub removes team access but not org access
+      -  [New Relic](https://synthetics.newrelic.com) - remove access to accounts (CD Public: [1783376](https://synthetics.newrelic.com/accounts/1783376), CD Dedicated: [2228819](https://synthetics.newrelic.com/accounts/2228819), ...) AH Application: `ccs-newrelic`
+      -  [SOS](https://w3.sos.ibm.com/) - [Accesshub Removal link](https://pages.github.ibm.com/SOSTeam/SOS-Docs/idmgt/accesshub/Delete-account/#steps-to-delete-account) and then work with security focal to remove from [portal](https://w3.sos.ibm.com/inventory.nsf/compliance_portal.xsp?c_code=ridos); 
+      -  [Thycotic](https://pimconsole.sos.ibm.com/) - [Link]( https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/Thycotic.md#preconditions) (*** HOW ?**)
 
   -  **Removal of Accesses not managed through AccessHUB**
       - [ ]  Vault - Owners defined [here](https://ibm.ent.box.com/notes/344444043206) to raise access removal request following guidleinelines documented [Vault Remove Members Runbook](https://pages.github.ibm.com/vault-as-a-service/vault/onboarding/remove-members.html)
