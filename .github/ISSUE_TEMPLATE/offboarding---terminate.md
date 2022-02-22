@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-Refer the [Offboarding Runbook](https://github.ibm.com/org-ids/compliance/blob/smith-runbook-updates/runbooks/access-control/Offboarding.md)
+Refer the [Offboarding Runbook](https://github.ibm.com/org-ids/compliance/blob/master/runbooks/access-control/Offboarding.md)
 
 Link to [CISO Ticket](https://github.ibm.com/ibmcloud/ciso-compliance-offboarding/issues) :
 
