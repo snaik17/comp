@@ -39,7 +39,7 @@ Link to [CISO Ticket](https://github.ibm.com/ibmcloud/ciso-compliance-offboardin
 
 In case access was not revoked by transfer date and needed to be maintained temporarily beyond last day in team ( transition period) - mention those specific ones permissions in CISO ticket . These need to be removed at the end of transition period and CBN triggered by New manager. 
 
--[ ] Assess if the transferred individual had access to any shared accounts or credentials, in which case immediately trigger their rotation/change, and document in this issue the list of impacted accounts/credentials.
+Assess if the transferred individual had access to any shared accounts or credentials, in which case immediately trigger their rotation/change, and document in this issue the list of impacted accounts/credentials.
 
    - [ ] Revoke & Rotate  **IAM keys** and **IAM serviceIDs** Check items user had access to by checking the [IAM Inventory Link](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/iam-credentials.csv) 
       - **IAM Service ID** : Update owner/rotator to new owner/rotator in [IAM Config ](https://github.ibm.com/org-ids/key-rotation/tree/master/config) and raise pull request. Daily automation will run and update the [Inventory](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/)    
