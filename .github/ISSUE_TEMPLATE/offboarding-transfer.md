@@ -7,86 +7,55 @@ assignees: ''
 
 ---
 
-CISO Ticket
+Refer the [Offboarding Runbook](https://github.ibm.com/org-ids/compliance/blob/master/runbooks/access-control/Offboarding.md)
 
- ###  Service Team : Access To Be Revoked Checklist (Offboarding)
- - [ ] Agree on which permissions the transferred individual needs to temporarily maintain, if any (e.g., needed for completing transfer of activities from the old job role). Please consider that any access that is maintained for transfer-related activities is only allowed for needed period of time, after which, New Manager needs to trigger the revoke on AccessHub or other relevant access management/account tools.
+Link to [CISO Ticket](https://github.ibm.com/ibmcloud/ciso-compliance-offboarding/issues) :
 
- - [ ] Document in the issue all the permissions that are being retained by the transferred individual specifically for transfer-related activities. Update the Transition end-date field in the Information section with a planned date by which all the transition-related activities will be completed and the related permissions will be revoked.
+-----
 
-| Application        | Permissions           | Revoked       | Date Revoked| 
-| ------------------ |:---------------------:| -------------:| -----------:|
-| GHE                |                       |     Y/N       |             |
-| IAM                |                       |     Y/N       |             |
-| Softlayer          |                       |     Y/N       |             |
-| New Relic          |                       |     Y/N       |             |
-| SOS                |                       |     Y/N       |             |
-| Thycotic           |                       |     Y/N       |             |
-| Vault              |                       |     Y/N       |             |
-| Pagerduty          |                       |     Y/N       |             |
-| Slack              |                       |     Y/N       |             |
-| Box                |                       |     Y/N       |             |
-| Other              |                       |     Y/N       |             |
+ -    **Removal of access from [Accessshub](https://ibm.idaccesshub.com/ECMv6/request/requestHome)** ([Details](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)) 
+      - Open [AccessHUB Home page](https://ibm.idaccesshub.com/ECMv6/request/requestHome).
+      - Click Request or Manage Access for Others (to delete an account for someone who is transfering out of your team) 
+      -  Search for the user, then click user & select Manage
+      - Next you will see a list of applications member has access to , select and click-on Delete.
+      - Confirm by entering reason for removal - "User is leaving CD team and no longer needs access to CD resources", then click-on Remove 
+      - Resource List :
+          - [ ] [IAM resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub.md)
+        - [ ] [SoftLayer resources](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-SL.md) 
+        - [ ] [GHE orgs](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/AccessHub-GHE.md) 
+        - [ ] [New Relic](https://synthetics.newrelic.com) - remove access to accounts (CD Public: [1783376](https://synthetics.newrelic.com/accounts/1783376), CD Dedicated: [2228819](https://synthetics.newrelic.com/accounts/2228819), ...) AH Application: `ccs-newrelic`
+        - [ ] [SOS](https://w3.sos.ibm.com/) - [Accesshub Removal link](https://pages.github.ibm.com/SOSTeam/SOS-Docs/idmgt/accesshub/Delete-account/#steps-to-delete-account) and then work with security focal to remove from [portal](https://w3.sos.ibm.com/inventory.nsf/compliance_portal.xsp?c_code=ridos); 
+        -  [ ] [Thycotic](https://pimconsole.sos.ibm.com/) - [Link]( https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/Thycotic.md#preconditions) 
 
+  -  **Removal of Accesses not managed through AccessHUB**
+      - [ ]  Vault - Owners defined [here](https://ibm.ent.box.com/notes/344444043206) to raise access removal request following guidleinelines documented [Vault Remove Members Runbook](https://pages.github.ibm.com/vault-as-a-service/vault/onboarding/remove-members.html)
+      - [ ] [PagerDuty](https://ibm.pagerduty.com/) - Remove from CD team: Bluemix DevOps Services OTC; remove from Insights team: CD Insights [Link](https://w3.ibm.com/w3publisher/pagerduty/getting-started/offboarding)
+      - [ ] [ServiceNow](https://watson.service-now.com/) -  Refer [ ServiceNow Runbook ](https://github.ibm.com/org-ids/otc-developer-runbooks/blob/master/common/ServiceNow-Access.md#removing-users)
+      - [ ] [ASoC](https://cloud.appscan.com/AsoCUI/serviceui/main/myapps/oneapp/f8fca2ac-7671-e811-9423-002590ac753d/scans) - ask in `#sos-asoc` to remove user from "IBM DevOps Services" group
+      - [ ] Slack - Remove from private slack channels
+      - [ ] Box folders - Remove from  Box folders (Example [WW CD Team](https://ibm.ent.box.com/folder/30409987383?s),DevOps Insights Dev, SRE-devops-services, Any squad specific folders ) Follow [this](https://support.box.com/hc/en-us/articles/360044196273-Managing-Collaborators#transferfolderowner) for Transfer of Ownership incase needed
+      - [ ] [Aha! ](https://secure.aha.io/) -  when the intranet ID is removed from BluePages, the user should be removed from Aha. If you want to be sure, you can contact an admin in #bigblue-aha-liaison Slack channel to remove from the account. 
+      - [ ] Remove from GitHub (public) Repos: [Open toolchain templates](https://github.com/open-toolchain/) 
 
-
-- [ ] Process all the event-driven CBN triggered for the individual by all the applicable Account Management systems, which will be directed to New Manager, within 15 days. For AccessHub New Manager can leverage “consulting” feature to request input from Old Manager. Refer to the AccessHub documentation.
-
-- [ ] Promptly revoke ANY access that is no longer required for the new job role, including accesses not managed through Account Manag ement systems (e.g. IBM box, github, private slack channel, etc.)
+In case access was not revoked by transfer date and needed to be maintained temporarily beyond last day in team ( transition period) - mention those specific ones permissions in CISO ticket . These need to be removed at the end of transition period and CBN triggered by New manager. 
 
 -[ ] Assess if the transferred individual had access to any shared accounts or credentials, in which case immediately trigger their rotation/change, and document in this issue the list of impacted accounts/credentials.
 
    - [ ] Revoke & Rotate  **IAM keys** and **IAM serviceIDs** Check items user had access to by checking the [IAM Inventory Link](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/iam-credentials.csv) 
-
-      - **IAM Service ID** : Update owner/rotator to new owner/rotator in [IAM Config ](https://github.ibm.com/org-ids/key-rotation/tree/master/config) and raise pull request. Daily automation will run and update the [Inventory](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/)
-     
-      - **IAM key** :  - Update the following the ) and also update owner/rotator in the file [here](https://github.ibm.com/org-ids/key-rotation/blob/master/functionalID-user-mapping.yaml) and also update [Link](https://github.ibm.com/org-ids/key-rotation/tree/master/runbook#api-keys-ownership
-
+      - **IAM Service ID** : Update owner/rotator to new owner/rotator in [IAM Config ](https://github.ibm.com/org-ids/key-rotation/tree/master/config) and raise pull request. Daily automation will run and update the [Inventory](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/)    
+      - **IAM key** :  - Follow the [Link](https://github.ibm.com/org-ids/key-rotation/tree/master/) and update owner/rotator in the file [here](https://github.ibm.com/org-ids/key-rotation/blob/master/functionalID-user-mapping.yaml)
    - [ ] Revoke & Rotate  **non-IAM keys** : Check items user had access to by checking
        the [non-IAM Inventory](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/non-iam-credentials.csv) 
-   
-      - Update owner/rotator in [here](https://github.ibm.com/org-ids/key-rotation/blob/master/config-non-iam/credentials.yaml) and raise pull request. Daily automation will run and update the [non-IAM Inventory ](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/non-iam-credentials.csv) 
-   
-  
+      - Update owner/rotator in [here](https://github.ibm.com/org-ids/key-rotation/blob/master/config-non-iam/credentials.yaml) and raise pull request. Daily automation will run and update the [non-IAM Inventory ](https://github.ibm.com/org-ids/key-rotation/blob/master/credential-inventory/non-iam-credentials.csv)    
    - [ ] Rotate secrets to data stores/services the employee had access to in Vault
        - List of people with Access can be seen [here](https://ibm.ent.box.com/file/344444043206?s=t3qnek4rzidylcp3yt4pe01xx5bjhgzb)
-         If person User - revoke access
-         If Person is Owner in Vault - all keys must be rotated. (*** HOW ?**)
-
-- [ ] - If the individual worked on Financial Services Cloud:
+         If person is User in Vault - revoke access.
+         If Person is Owner in Vault - all keys must be rotated. 
+   - [ ] Rotate secrets to data stores/services the employee had access to in KeyProtect
+    
+- [ ]  If the individual worked on Financial Services Cloud:
         Report transfer of that individual to their upline manager within two (2) days of the formal transfer date. Capture screenshot of email.
 
 - [ ] If the individual worked on HIPAA regulated environment:
     Perform the required offboarding steps in the HIPAA checklist 
     (Acknowledgement: When you no longer require production access, you must complete WCP offboarding procedures and confirm that no customer PHI existed on your workstation or all customer PHI has been removed by an IBM approved disposal tool.)
-
- ------
-### Off-Boarding: Change of Manager/Department:
-**Verify employee access has been removed within 7 days**
-
-  - **Off-Boarding: Change of Manager/Department**
-      No explicit action is needed. Access Hub syncs with Enterprise directory every 27 minutes. Continuous CBN ('EventTriggered') is set up by default and runs automatically when a user’s department or manager changes. AccessHub will batch the required re-validations until Friday of the respective week. Revalidation is initiated once a week (Friday) with all changes that happened since the last Continuous CBN was launched. Perform the following activities to confirm access is removed:
-     1. Run "My Application EventTriggered CBN" report to make sure Continuous CBN has been triggered. Once manager revokes access, verify employee access is eventually removed
-     2. Run "My Application User Data" report to make sure employee is no longer listed in Access Hub. Take screen-shots of first and last page and also download report.
-     3. Run the command (and redirect output to file) "ibmcloud account users' to list the users on the IAM side to make sure employee is not longer listed. Take screenshot with date.
-     4. Record the following output (from steps 2 and 3 above) in the off-boarding git issue:
-        a) screenshots with dates 
-        b) attach xlsx report and output of command
-
-### Off-Boarding: Leaving IBM:
-**Verify employee access has been removed within 24 hrs**
-**Verify that all the privilidged creds which employee have access to have been changed ASAP after resignation** 
-
-
- - [AccessHub](https://ibm.idaccesshub.com/ECM/) - review ALL accesses for the employee in AccessHub (before transfer to new manager) and revoke accesses no longer needed.  This will cover access to production and development resources in bmdevops (prod), DevOps.Admin (EU prod), devops.eu.org (EU dev) and bmdevops.dev (dev) accounts. This will also cover Insights Jenkins server and any WhiteWater Github Domains controlled via AccessHub.
-  
-  - **Off-Boarding: Leaving IBM**
-     No explicit action is needed to remove the employee. Access Hub syncs with Enterprise directory every 27 minutes and initiates a Delete task. Perform the following activities to confirm access is removed:
-      1. Run "My Application Leaver’s" report to make sure employee is listed
-      1. Run "My Application User Data" report to make sure employee is no longer listed in Access Hub. Take screen-shots of first and last page and also download report. 
-      1. Run the command (and redirect output to file) to list the users on the IAM side ‘ibmcloud account users’ to make sure employee is not longer listed. Take screenshot with date.
-      1. Record the following output (from steps 2 and 3 above) in the off-boarding git issue:
-        a) screenshots with dates, and 
-        b) attach xlsx report and output of command  
-        
-***Note Managers Please check that the leavng employee is not be part of current CBN process***
